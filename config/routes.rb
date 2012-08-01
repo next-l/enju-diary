@@ -1,4 +1,6 @@
 EnjuDiary::Application.routes.draw do
+  resources :manifestations
+
   resources :patrons
 
   # The priority is based upon order of creation:

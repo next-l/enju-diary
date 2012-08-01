@@ -11,7 +11,16 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120801142310) do
+ActiveRecord::Schema.define(:version => 20120801142509) do
+
+  create_table "manifestations", :force => true do |t|
+    t.text     "original_title"
+    t.string   "isbn"
+    t.datetime "date_of_publication"
+    t.text     "url"
+    t.datetime "created_at",          :null => false
+    t.datetime "updated_at",          :null => false
+  end
 
   create_table "patrons", :force => true do |t|
     t.text     "full_name"
