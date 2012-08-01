@@ -1,4 +1,6 @@
 EnjuDiary::Application.routes.draw do
+  resources :patrons
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
