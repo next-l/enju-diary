@@ -1,4 +1,6 @@
 EnjuDiary::Application.routes.draw do
+  resources :libraries
+
   resources :manifestations
 
   resources :patrons

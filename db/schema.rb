@@ -11,7 +11,15 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120801142509) do
+ActiveRecord::Schema.define(:version => 20120802130716) do
+
+  create_table "libraries", :force => true do |t|
+    t.string   "name"
+    t.text     "address"
+    t.string   "telephone_number"
+    t.datetime "created_at",       :null => false
+    t.datetime "updated_at",       :null => false
+  end
 
   create_table "manifestations", :force => true do |t|
     t.text     "original_title"
