@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Patron:</b>
+  <%= @create.patron_id %>
+</p>
+
+<p>
+  <b>Manifestation:</b>
+  <%= @create.manifestation_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_create_path(@create) %> |
+<%= link_to 'Back', creates_path %>
