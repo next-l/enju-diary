@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120803135301) do
+ActiveRecord::Schema.define(:version => 20120804140939) do
 
   create_table "creates", :force => true do |t|
     t.integer  "patron_id"
@@ -41,6 +41,20 @@ ActiveRecord::Schema.define(:version => 20120803135301) do
     t.text     "full_name"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+  end
+
+  create_table "produces", :force => true do |t|
+    t.integer  "patron_id"
+    t.integer  "manifestation_id"
+    t.datetime "created_at",       :null => false
+    t.datetime "updated_at",       :null => false
+  end
+
+  create_table "realizes", :force => true do |t|
+    t.integer  "patron_id"
+    t.integer  "manifestation_id"
+    t.datetime "created_at",       :null => false
+    t.datetime "updated_at",       :null => false
   end
 
 end
