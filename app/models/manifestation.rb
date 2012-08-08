@@ -7,4 +7,5 @@ class Manifestation < ActiveRecord::Base
   has_many :contributors, :through => :realizes, :source => :patron
   has_many :produces
   has_many :publishers, :through => :produces, :source => :patron
+  has_many :items
 end
