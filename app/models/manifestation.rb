@@ -8,4 +8,7 @@ class Manifestation < ActiveRecord::Base
   has_many :produces
   has_many :publishers, :through => :produces, :source => :patron
   has_many :items
+
+  validates :original_title, :presence => true
+  validates :isbn, :length => {:is => 13}, :allow_blank => true
 end

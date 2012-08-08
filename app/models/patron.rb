@@ -7,4 +7,6 @@ class Patron < ActiveRecord::Base
   has_many :expressions, :through => :realizes
   has_many :produces
   has_many :manifestations, :through => :produces
+
+  validates :full_name, :presence => true
 end
