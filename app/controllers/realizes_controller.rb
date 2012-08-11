@@ -2,7 +2,7 @@ class RealizesController < ApplicationController
   # GET /realizes
   # GET /realizes.json
   def index
-    @realizes = Realize.all
+    @realizes = Realize.page(params[:page])
 
     respond_to do |format|
       format.html # index.html.erb

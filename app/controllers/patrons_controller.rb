@@ -2,7 +2,7 @@ class PatronsController < ApplicationController
   # GET /patrons
   # GET /patrons.json
   def index
-    @patrons = Patron.all
+    @patrons = Patron.page(params[:page])
 
     respond_to do |format|
       format.html # index.html.erb

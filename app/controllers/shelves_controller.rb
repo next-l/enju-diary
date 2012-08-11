@@ -2,7 +2,7 @@ class ShelvesController < ApplicationController
   # GET /shelves
   # GET /shelves.json
   def index
-    @shelves = Shelf.all
+    @shelves = Shelf.page(params[:page])
 
     respond_to do |format|
       format.html # index.html.erb

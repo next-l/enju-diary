@@ -2,7 +2,7 @@ class CreatesController < ApplicationController
   # GET /creates
   # GET /creates.json
   def index
-    @creates = Create.all
+    @creates = Create.page(params[:page])
 
     respond_to do |format|
       format.html # index.html.erb

@@ -2,7 +2,7 @@ class ProducesController < ApplicationController
   # GET /produces
   # GET /produces.json
   def index
-    @produces = Produce.all
+    @produces = Produce.page(params[:page])
 
     respond_to do |format|
       format.html # index.html.erb

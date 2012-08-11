@@ -2,7 +2,7 @@ class LibrariesController < ApplicationController
   # GET /libraries
   # GET /libraries.json
   def index
-    @libraries = Library.all
+    @libraries = Library.page(params[:page])
 
     respond_to do |format|
       format.html # index.html.erb
