@@ -1,4 +1,8 @@
 EnjuDiary::Application.routes.draw do
+  resources :checkins
+
+  resources :checkouts
+
   resources :users
 
   resources :shelves
