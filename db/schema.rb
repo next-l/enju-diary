@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120807135637) do
+ActiveRecord::Schema.define(:version => 20120811171934) do
 
   create_table "creates", :force => true do |t|
     t.integer  "patron_id"
@@ -70,6 +70,14 @@ ActiveRecord::Schema.define(:version => 20120807135637) do
     t.string   "name"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+  end
+
+  create_table "users", :force => true do |t|
+    t.string   "username"
+    t.string   "user_number"
+    t.string   "email"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
   end
 
 end
