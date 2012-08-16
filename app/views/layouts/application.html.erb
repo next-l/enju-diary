@@ -47,9 +47,22 @@
           <a class="brand" href="#">EnjuDiary</a>
           <div class="container-fluid nav-collapse">
             <ul class="nav">
-              <li><%= link_to "Link1", "/path1"  %></li>
-              <li><%= link_to "Link2", "/path2"  %></li>
-              <li><%= link_to "Link3", "/path3"  %></li>
+              <li><%= link_to "Manifestation", manifestations_path  %></li>
+              <li><%= link_to "Item", items_path  %></li>
+              <li><%= link_to "Patron", patrons_path  %></li>
+              <li><%= link_to "User", users_path  %></li>
+            </ul>
+            <ul class="nav">
+              <li class="dropdown" id="checkout">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#checkout">
+                  Checkout
+                  <b class="caret"></b>
+                </a>
+                <ul class="dropdown-menu">
+                  <li><%= link_to "Checkout", checkouts_path %></li>
+                  <li><%= link_to "Checkin", checkins_path %></li>
+                </ul>
+              </li>
             </ul>
           </div><!--/.nav-collapse -->
         </div>
