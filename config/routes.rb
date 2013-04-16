@@ -1,4 +1,20 @@
 EnjuDiary::Application.routes.draw do
+  resources :checkins
+
+  resources :checkouts
+
+  resources :users
+
+  resources :shelves
+
+  resources :items
+
+  resources :produces
+
+  resources :realizes
+
+  resources :creates
+
   resources :libraries
 
   resources :manifestations
@@ -54,7 +70,7 @@ EnjuDiary::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  # root :to => 'welcome#index'
+  root :to => 'manifestations#index'
 
   # See how all your routes lay out with "rake routes"
 

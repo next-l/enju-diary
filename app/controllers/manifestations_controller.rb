@@ -2,7 +2,7 @@ class ManifestationsController < ApplicationController
   # GET /manifestations
   # GET /manifestations.json
   def index
-    @manifestations = Manifestation.all
+    @manifestations = Manifestation.page(params[:page])
 
     respond_to do |format|
       format.html # index.html.erb
